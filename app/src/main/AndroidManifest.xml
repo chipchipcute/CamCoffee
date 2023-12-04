@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.coffeapplication">
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/camcoffee"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/camcoffee_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.OrderDrinkApp">
+        <activity android:name="com.example.coffeapplication.Activities.SetLuongActiviy"></activity>
+        <activity android:name="com.example.coffeapplication.Activities.BillView" />
+        <activity android:name="com.example.coffeapplication.Activities.StaticThongKe" />
+        <activity android:name="com.example.coffeapplication.Activities.DetailStatisticActivity" />
+        <activity android:name="com.example.coffeapplication.Activities.AddStaffActivity" />
+        <activity
+            android:name="com.example.coffeapplication.Activities.EditTableActivity"
+            android:label="Sửa bàn ăn"
+            android:theme="@style/PopUpActivity" />
+        <activity
+            android:name="com.example.coffeapplication.Activities.ChangeTableActivity"
+            android:label="Chuyển bàn"
+            android:theme="@style/PopUpActivity"/>
+        <activity android:name="com.example.coffeapplication.Activities.PaymentActivity" />
+        <activity
+            android:name="com.example.coffeapplication.Activities.AmountMenuActivity"
+            android:label="số lượng món"
+            android:theme="@style/PopUpActivity" />
+        <activity android:name="com.example.coffeapplication.Activities.AddCategoryActivity" />
+        <activity android:name="com.example.coffeapplication.Activities.AddMenuActivity" />
+        <activity
+            android:name="com.example.coffeapplication.Activities.AddTableActivity"
+            android:label="@string/addTable"
+            android:theme="@style/PopUpActivity" />
+        <activity android:name="com.example.coffeapplication.Activities.HomeActivity" />
+        <activity android:name="com.example.coffeapplication.Activities.LoginActivityNvien" />
+        <activity android:name="com.example.coffeapplication.Activities.LoginActivityAdmin" />
+        <activity android:name="com.example.coffeapplication.Activities.Register2ndActivity" />
+        <activity android:name="com.example.coffeapplication.Activities.WelcomeActivity" />
+        <activity android:name="com.example.coffeapplication.Activities.RegisterActivity" />
+        <activity android:name="com.example.coffeapplication.Activities.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDbyE5LqzzYUIlp_i9DPDoM5vaGjgW7r0k"></meta-data>
+    </application>
+
+</manifest>

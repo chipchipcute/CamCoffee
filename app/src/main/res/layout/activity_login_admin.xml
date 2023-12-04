@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layoutLogin_admin"
+    android:transitionName="transition_login_admin"
+    android:visibility="visible"
+    tools:context=".Activities.LoginActivityAdmin">
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_login_backbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="backFromLogin"
+        android:padding="15dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        tools:ignore="MissingConstraints" />
+
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/sign_upIn"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@id/logo"-->
+    <!--        android:layout_alignBottom="@+id/sign_inUp"-->
+    <!--        android:layout_alignParentEnd="true"-->
+    <!--        android:layout_marginEnd="30dp"-->
+    <!--        android:layout_toEndOf="@+id/sign_inUp"-->
+    <!--        android:clickable="true"-->
+    <!--        android:focusable="true"-->
+    <!--        android:fontFamily="sans-serif-black"-->
+    <!--        android:text="@string/sign_up"-->
+    <!--        android:textAlignment="viewEnd"-->
+    <!--        android:textColor="#2D2F31"-->
+    <!--        android:textColorHint="#482829"-->
+    <!--        android:textSize="20sp"-->
+    <!--        android:textStyle="normal"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/sign_inUp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/sign_inUp" />-->
+
+    <TextView
+        android:id="@+id/sign_inUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-black"
+        android:shadowColor="#2D2F31"
+        android:text="@string/admin"
+        android:textAlignment="textStart"
+        android:textColor="#2D2F31"
+        android:textColorHint="@color/brown"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/textInputLayout2_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_inUp"
+        android:hint="@string/Email"
+        android:backgroundTint="#482829"
+        app:boxStrokeColor="@color/black"
+        android:textColorHint="#482829"
+        android:fontFamily="@font/bangers"
+        app:startIconDrawable="@drawable/ic_email">
+
+        <EditText
+            android:inputType="textEmailAddress"
+            android:id="@+id/txtl_login_TenDN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sign_inUp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.41"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sign_inUp"
+            android:textColorHighlight="@color/brown"
+            android:textStyle="normal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/textInputLayout_admin"
+        android:backgroundTint="@color/brown"
+        app:boxStrokeColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2_admin"
+        android:hint="@string/password"
+        app:counterEnabled="true"
+        app:counterMaxLength="25"
+        app:endIconMode="password_toggle"
+        app:counterOverflowTextColor="@color/brown"
+        android:textColorHint="@color/brown"
+        app:startIconDrawable="@drawable/ic_lock"
+        android:fontFamily="@font/bangers">
+
+        <EditText
+            android:inputType="textPassword"
+            android:id="@+id/txtl_login_MatKhau"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginUp"
+            tools:layout_editor_absoluteX="40dp"
+            android:textColorHint="@color/brown"
+            android:textColorHighlight="@color/brown"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+<!--    <TextView-->
+<!--        android:id="@+id/btn_login_DangKy_admin"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:fontFamily="sans-serif-black"-->
+<!--        android:onClick="callRegisterFromLogin"-->
+<!--        android:text="@string/dangki"-->
+<!--        android:textColor="#5C5A5A"-->
+<!--        android:textSize="18sp"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/textInputLayout_admin"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textInputLayout_admin" />-->
+
+    <Button
+        android:id="@+id/sign_buttonIn_admin"
+        android:layout_width="127dp"
+        android:layout_height="53dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="@color/black"
+        android:elevation="4dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/dangnhap"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout_admin"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout_admin" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/other_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sign_buttonIn"
+        android:layout_marginHorizontal="100dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/bangers"
+        android:text="@string/sign_in_with"
+        android:textAlignment="center"
+        android:textColor="@color/black50"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_buttonIn"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:visibility="gone"
+        android:id="@+id/vk_button"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="180dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:text="Liên hệ"
+        android:textStyle="bold"
+        android:textColor="@color/black50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/other_login"
+        app:cornerRadius="30dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:visibility="gone"
+        android:id="@+id/google_button"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="180dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/ic_google"
+        android:text="@string/google"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/black50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/other_login"
+        app:cornerRadius="30dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
